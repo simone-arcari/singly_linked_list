@@ -72,7 +72,7 @@ node_t *create_list(void) {
  *      [out] return list: pointer to the sentinel node
  *
  ******************************************************************************/
-	node_t *list = (node_t*)malloc(sizeof(node_t));
+	node_t *list = malloc(sizeof(node_t));
 	list->next = NULL;
 
 	return (list);
@@ -122,7 +122,7 @@ node_t *insert(node_t *pos, int value) {
  ******************************************************************************/
 	assert(pos!=NULL);
 	
-	node_t *new_node = (node_t*)malloc(sizeof(node_t));
+	node_t *new_node = malloc(sizeof(node_t));
 	new_node->value = value;	// the node contains the entered value
 
 	new_node->next = pos->next;	// insertion in list (first operation)
